@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
+
+body {
+  background: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /*font-family: "Fraunces", serif;
+  font-family: "Montserrat", sans-serif;*/
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  background: white;
+  border-radius: 0.5rem;
+}
+
+.perfumimg {
+  width: 50%;
+  border-radius: 0.5rem 0px 0px 0.5rem;
+}
+/* estilização lado esquerdo, imagem */
+
+/* daqui em diante, estilização do lado direito, textos */
+.textside {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.9rem;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.globalprice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.trueprice {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.previousprice {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: line-through;
+  color: hsla(228, 12%, 48%, 0.6);
+  font-size: 14px;
+}
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    border: 0px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(9, 41, 3);
+}
+/* finalizou a estilização do lado direito, texto 
+daqui em diante, realizado a responsividade para mobile*/
+
+@media only screen and (max-width: 425px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .perfumimg{
+        content: url(./images/image-product-mobile.jpg);
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0px 0px;
+    }
+    .textside {
+        padding: 1.2rem;
+        gap: 1.4rem;
+    }  
+}
